@@ -1,9 +1,3 @@
-<template>
-  <div class="app">
-    <Tweet />
-  </div>
-</template>
-
 <script setup>
   import { ref } from 'vue';
   import Tweet from './components/Tweet.vue';
@@ -39,7 +33,24 @@
 ]);
 </script>
 
+<template>
+
+  <div class="app">
+    <Tweet v-for="tweet in tweets"
+      :key="id"
+      :userName="tweet.user.name"
+      :userImage="tweet.user.image"
+      :userHandle="tweet.user.handle"
+      :timestamp="tweet.timestamp"
+      :message="tweet.message"
+    />
+    
+  </div>
+
+</template>
+
 <style>
+
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
