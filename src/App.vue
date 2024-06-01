@@ -1,7 +1,7 @@
 <script setup>
   import { ref } from 'vue';
   import Tweet from './components/Tweet.vue';
-  import ActionComponent from './components/ActionComponent.vue'
+  import ActionComponent from './components/Actions.vue'
   import MessageComponent from './components/MessageComponent.vue'
   import ProfileImage from './components/ProfileImage.vue'
   import TimeStamp from './components/TimeStamp.vue'

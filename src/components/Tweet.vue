@@ -7,12 +7,12 @@ defineProps({
   timestamp: String,
 })
 
-import ActionComponent from './ActionComponent.vue';
+import ActionComponent from './Actions.vue';
 import MessageComponent from './MessageComponent.vue';
 import ProfileImage from './ProfileImage.vue';
 import TimeStamp from './TimeStamp.vue';
 import UserComponent from './UserComponent.vue';
-  
+import Actions from './Actions.vue';
 </script>
 
 
@@ -26,7 +26,7 @@ import UserComponent from './UserComponent.vue';
       </div>
       <MessageComponent :message ="message"></MessageComponent>
       <div class="actions">
-        <ActionComponent></ActionComponent>
+        <Actions></Actions>
       </div>
     </div>
   </div>
