@@ -6,30 +6,29 @@ defineProps({
   message: String,
   timestamp: String,
 })
+
+import ActionComponent from './ActionComponent.vue';
+import MessageComponent from './MessageComponent.vue';
+import ProfileImage from './ProfileImage.vue';
+import TimeStamp from './TimeStamp.vue';
+import UserComponent from './UserComponent.vue';
+  
 </script>
 
 
 <template>
-  <div class="tweet">
-    <img :src="userImage" class="profile" :alt="userHandle" />
+ <div class="tweet">
+    <ProfileImage :userImage ="userImage"></ProfileImage>
     <div class="body">
       <div class="top">
-        <span class="user">
-          <span class="name">{{ userName }}</span>
-          <span class="handle">{{ userHandle }}</span>
-        </span>
-        <span class="timestamp">{{ timestamp }}</span>
+          <UserComponent :userName = "userName"></UserComponent>
+          <TimeStamp :timestamp = timestamp></TimeStamp>
       </div>
-      <p class="message">{{ message }}</p>
+      <MessageComponent :message ="message"></MessageComponent>
       <div class="actions">
-        <!-- Font Awesome icons -->
-        <i class="far fa-comment"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="far fa-heart"></i>
-        <i class="fas fa-share"></i>
+        <ActionComponent></ActionComponent>
       </div>
     </div>
-    <i class="fas fa-ellipsis-h"></i>
   </div>
 </template>
 

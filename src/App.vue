@@ -1,6 +1,11 @@
 <script setup>
   import { ref } from 'vue';
   import Tweet from './components/Tweet.vue';
+  import ActionComponent from './components/ActionComponent.vue'
+  import MessageComponent from './components/MessageComponent.vue'
+  import ProfileImage from './components/ProfileImage.vue'
+  import TimeStamp from './components/TimeStamp.vue'
+  import UserComponent from './components/UserComponent.vue'
 
   const tweets = ref([
     {
@@ -34,7 +39,6 @@
 </script>
 
 <template>
-
   <div class="app">
     <Tweet v-for="tweet in tweets"
       :key="id"
@@ -44,9 +48,7 @@
       :timestamp="tweet.timestamp"
       :message="tweet.message"
     />
-    
   </div>
-
 </template>
 
 <style>
